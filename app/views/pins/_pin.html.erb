@@ -1,0 +1,6 @@
+<tr>
+  <td><%= pin.description %></td>
+  <td><div class = "btn btn-white"><%= link_to 'Show', pin %></div></td>
+  <td><div class = "btn btn-white"><%= link_to 'Edit', edit_pin_path(pin) %></div></td>
+  <td><div class = "btn btn-white"><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
+</tr>
