@@ -1,6 +1,9 @@
 Handup::Application.routes.draw do
+  devise_for :users
+
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'
+  get 'history123' => 'pages#history123'
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:
