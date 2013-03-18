@@ -1,6 +1,8 @@
 <tr>
   <td><%= pin.description %></td>
-  <td><div class = "btn btn-white"><%= link_to 'Show', pin %></div></td>
+  <td><div class = "btn btn-white"><%= link_to 'Enter Classroom', pin %></div></td>
+  <% if current_user == pin.user %>
   <td><div class = "btn btn-white"><%= link_to 'Edit', edit_pin_path(pin) %></div></td>
-  <td><div class = "btn btn-white"><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
+  <td><div class = "btn btn-white"><%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
+  <% end %>
 </tr>
