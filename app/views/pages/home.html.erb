@@ -1,16 +1,38 @@
 <% if user_signed_in? %>
 
- <div class="hero-unit">
-    	<div class="page-header">
-		<h1>hand<font color = "#0066CC">UP</font>
-			<p><small>welcome back!</small></p></h1>
-		<p>  
+ <p>
+<div class="container-fluid">
+    <div class="row-fluid">
+   		<div class="page-header span5"> <p>
+		<h1>hand<font color = "#0066CC">UP</font></h1></p>
+		<p><h3>making class smarter</h3></p>
+		</div>
+   </p>
+    <div class="hero-unit span7 pull-right">
+		<body>
+		<p>
+			Welcome back to <strong>hand<font color= "#0066CC">UP</font></strong>!
 		</p>
+		</body>
 		<p>
 			<%= link_to "My Classrooms", pins_path, class: "btn btn-large btn-success" %>
 		</p>
-    </div>
  </div>
+ </div>
+ </div>
+	<div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span6 well">
+    <p class = "text-center"> <h4>Step up your game with USA Basketball!</h4> </p>
+    <p><%= link_to "Learn the game's fundamentals from the best in the world. USA Basketball is the ultimate authority on youth basketball.", "http://www.ihoops.com/" %></p>
+    </div>
+    <div class="span6 well">
+    <p class = "text-center"> <h4>Stay one step ahead of your teachers.</h4> </p>
+	 <p><%= link_to "CNN Student News offers the breaking headlines and in-depth stories that matter most to students. Our news for our generation.", "http://www.cnn.com/studentnews/" %></p>
+    </div>
+    </div>
+    </div>	
+		
 
 <% else %>   
 
