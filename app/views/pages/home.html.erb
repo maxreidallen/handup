@@ -1,35 +1,55 @@
 <% if user_signed_in? %>
+
  <div class="hero-unit">
     	<div class="page-header">
-		<h1><small>welcome to</small>     hand<font color = "#0066CC">UP</font></h1>
-		<p>
+		<h1>hand<font color = "#0066CC">UP</font>
+			<p><small>welcome back!</small></p></h1>
+		<p>  
 		</p>
 		<p>
-		Select a class:
-		</p>
-
-		<p>
-			<%= link_to "History (Gabbert 10:00am)", history123_path, class: "btn btn-block btn-large btn-success" %>
-			<%= link_to "Math (Shorts 11:00am)", "#", class: "btn btn-block btn-large btn-info" %>
-			<%= link_to "Chemistry (Blackmon 1:00pm)", "#", class: "btn btn-block btn-large btn-success" %>
-			<%= link_to "English (Jones 2:00pm)", "#", class: "btn btn-block btn-large btn-info" %>
+			<%= link_to "My Classrooms", pins_path, class: "btn btn-large btn-success" %>
 		</p>
     </div>
  </div>
-<% else %>    
-    <div class="hero-unit">
-    	<div class="page-header"> <p>
+
+<% else %>   
+
+   <p>
+<div class="container-fluid">
+    <div class="row-fluid">
+   		<div class="page-header span5"> <p>
 		<h1>hand<font color = "#0066CC">UP</font></h1></p>
 		<p><h3>making class smarter</h3></p>
+		</div>
+   </p>
+    <div class="hero-unit span7 pull-right">
 		<body>
 		<p>
-			<strong>hand<font color= "#0066CC">UP</font></strong> gives all students a fair chance to answer questions in the classroom. By using the handUP mobile application, teachers can track key participation metrics and students can make their ideas heard.
+			<strong>hand<font color= "#0066CC">UP</font></strong> gives all students a fair chance to answer questions in the classroom. By using the handUP mobile application, teachers can track key participation metrics and students can make their ideas heard. <small><%= link_to "Learn more...", about_path %></small>
 		</p>
 		</body>
 		<p>
 			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-large btn-success" %>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-large btn-info" %>
 		</p>
-    </div>
  </div>
+ </div>
+ </div>
+    <div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span4 well">
+    <p class = "text-center"> <h4>Analytics</h4> </p>
+    <p>Measure the willingness, frequency, and quality of participation for each student</p>
+    </div>
+    <div class="span4 well">
+   	<p class = "text-center"> <h4>Empowerment</h4> </p>
+	<p>Encourage student participation by creating a fair and moderated environment</p>
+    </div>
+    <div class="span4 well">
+    <p class = "text-center"> <h4>Classroom Management</h4> </p>
+	<p>Administer instant surveys, track attendance, and grade contributions in real time</p>
+    </div>
+    </div>
+    </div>
+
  <% end %>
